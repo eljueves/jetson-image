@@ -5,8 +5,6 @@ on:
   push:
 name: Build
 env:
-  L4T32_BSP: 32.7.4
-  L4T35_BSP: 35.5.0
   L4T36_BSP: 36.3.0
 jobs:
   build:
@@ -15,28 +13,28 @@ jobs:
       matrix:
         include:
           # Ubuntu 22.04 + L4T 32 (Nano family)
-          - ubuntu: "22.04"
-            board: "jetson-nano"
-            revision: "300"
-            l4t_version: "32"
-            l4t_bsp: ${L4T32_BSP}
-          - ubuntu: "22.04"
-            board: "jetson-nano"
-            revision: "200"
-            l4t_version: "32"
-            l4t_bsp: ${L4T32_BSP}
-          - ubuntu: "22.04"
-            board: "jetson-nano"
-            revision: "100"
-            l4t_version: "32"
-            l4t_bsp: ${L4T32_BSP}
-          - ubuntu: "22.04"
-            board: "jetson-nano-2gb"
-            l4t_version: "32"
-            l4t_bsp: ${L4T32_BSP}
+          # - ubuntu: "22.04"
+          #   board: "jetson-nano"
+          #   revision: "300"
+          #   l4t_version: "32"
+          #   l4t_bsp: ${L4T32_BSP}
+          # - ubuntu: "22.04"
+          #   board: "jetson-nano"
+          #   revision: "200"
+          #   l4t_version: "32"
+          #   l4t_bsp: ${L4T32_BSP}
+          # - ubuntu: "22.04"
+          #   board: "jetson-nano"
+          #   revision: "100"
+          #   l4t_version: "32"
+          #   l4t_bsp: ${L4T32_BSP}
+          # - ubuntu: "22.04"
+          #   board: "jetson-nano-2gb"
+          #   l4t_version: "32"
+          #   l4t_bsp: ${L4T32_BSP}
 
           # Ubuntu 24.04 + L4T 36 (Orin family)
-          - ubuntu: "24.04"
+          - ubuntu: "22.04"
             board: "jetson-orin-nano"
             device: "SD"
             l4t_version: "36"
