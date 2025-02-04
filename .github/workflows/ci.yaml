@@ -5,6 +5,8 @@ on:
   push:
 name: Build
 env:
+  L4T32_BSP: 32.7.4
+  L4T35_BSP: 35.5.0
   L4T36_BSP: 36.3.0
 jobs:
   build:
@@ -34,7 +36,7 @@ jobs:
           #   l4t_bsp: ${L4T32_BSP}
 
           # Ubuntu 24.04 + L4T 36 (Orin family)
-          - ubuntu: "22.04"
+          - ubuntu: "24.04"
             board: "jetson-orin-nano"
             device: "SD"
             l4t_version: "36"
